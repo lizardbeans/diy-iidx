@@ -15,16 +15,19 @@ CODE INSTRUCTIONS:
 
 Folder iidxsdvx/IIDX 9+1e+9leds/Arduino Leonardo/ contains 2 folders.
 
+This folder contains the code for IIDX layout. (9 buttons, 1 encoder, 9 LEDs)
 
   * leovx: for low quality encoders (24ppr)
   
   * leovxhq: for high quality encoders (600ppr)
+  
+  If you have encoders with ppr different than 24ppr or 600ppr, you have to change some values inside the code.
 
 <hr>
 
 # Variations
 
-The code and CAD files included will let you make a DJDAO-size controller with interchangeable button plates, using an Arduino Leonardo to wire everything up.
+The code and CAD files included will let you make a Beatmania controller with interchangeable button plates, using an Arduino Leonardo to wire everything up.
 
 Included in this tutorial you can choose from 2 variations:
  
@@ -35,11 +38,12 @@ Included in this tutorial you can choose from 2 variations:
 You can either build just one of them or build both.
 But you'd have to change the code everytime you change the button keypad layout.
 
-Due to the number of pins it's imposible to have 3 encoders, 9 buttons and also have 9 LED's, so you either use me code (with only 5 LED's) or modify it to remove 1 encoder for 2 more LED's.
+Due to the number of pins it's imposible to have 3 encoders, 9 buttons and also have 9 LED's, so you either use my code (with only 5 LED's) or modify it to remove 1 encoder for 2 more LED's.
 
 ## Part List / Hardware
 
-Most of these links are from chinese webpages that give world-wide free shipping (if you can wait 2 months). Buying locally is also a good option.
+Things usde to make this controller.
+You can find links here: http://iidxsdvx.pancakeapps.com
 
 * Arduino Leonardo
 * 1 High quality encoder (600ppr)
@@ -50,14 +54,15 @@ Most of these links are from chinese webpages that give world-wide free shipping
 * 9 Omron D2MV-01-1C3 (50gr.) microswitch
 * Jumper wires
 * Crimp connectors
-* 400pin breadboard
+* 400pin breadboard/protobar
 
 ## Part List / Building Materials
 
-Most of these parts should be CNC cut or laser cut (which expensive). You can also use a cardboard box or wood MDF planks.
+Most of these parts should be CNC cut or laser cut (which is expensive). You can also use a cardboard box or wood MDF planks.
 I used clear acrylic because it's cheaper, also using only one thickness will make it even less expensive.
+
 **Main mounting plate**
-* 3 or 5mm Black/Clear Acrylic with holes for button pad and disc encoder, also screw holes. I used 5mm clear acrylic, but I found out it's better to use 3mm black acrylic fr the DJDAO FPS look.
+* 3 or 5mm Black/Clear Acrylic with holes for button pad and disc encoder, also screw holes. I used 5mm clear acrylic, but I found out it's better to use 3mm black acrylic for the DJDAO FPS look.
 
 **Button pads**
 * 5mm Clear acrylic with holes for buttons and encoders. Black looks way better, I used clear.
@@ -74,13 +79,11 @@ I used clear acrylic because it's cheaper, also using only one thickness will ma
 **Mounting Box**
 * I used 9-12mm MDF for the box walls, 5,5mm MDF for the base and 3mm MDF for the back door. Every cut and hole was made by me with a saw and some sandpaper. Using an electric saw and a sandpaper machine is a lot easier.
 
-I used what was available on the store, but on a next revision I'd go for 9mm walls, 3mm base and 3mm door, posibly made of acrylic.
-
 <hr>
 
 **PIN DIAGRAM**
 
-The pins are assigned to every button and encoder. You'll see that the PCB has many pins from A0 to A5, and from 0 to 13, so you'll have 19 pins in total. Remember that buttons use one pin, but encoders will use 2 pins for the cheap ones and 3 pins for the high quality (Pending revision). The PCB also has 3 grounds (GND) to choose from.
+The pins are assigned to every button and encoder. You'll see that the PCB has many pins from A0 to A5, and from 0 to 13, so you'll have 19 pins in total. Remember that buttons use one pin, but encoders will use 2 pins. The PCB also has 3 grounds (GND) to choose from, and a 5v output for the 600ppr encoder.
 
 This table shows configuration for both keypad layouts.
 
@@ -172,6 +175,7 @@ That leaves pin 6 to 10 for LEDS (5 buttons)
 
 **Beatmania IIDX only Layout**
 
+Tested working
 
 <table><thead>
 <tr>
@@ -227,6 +231,7 @@ That leaves pin 6 to 10 for LEDS (5 buttons)
 </tr>
 </tbody></table>
 
+
 <table><thead>
 <tr>
 <th>ENCODERS</th>
@@ -267,4 +272,4 @@ Buttons 1 to 9 are the main buttons, and X and Y axis are both encoders.
 
 ## Gallery
 
-[Check out these awesome pictures!](http://imgur.com/a/Vh7uL)
+[Here's the gallery, including other prototypes.](http://imgur.com/a/Vh7uL)
