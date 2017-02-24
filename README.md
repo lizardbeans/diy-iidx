@@ -1,10 +1,8 @@
 # Hybrid IIDX-SDVX Controller (DIY)
  
-Last update: January 22nd 2017
-I'll update in february-march when the rest of the stuff arrives.
  
 <div style='float: center'>
-  <img style='width: 200px' src='http://iidxsdvx.pancakeapps.com/pics/pic001.png'></img>
+  <img style='width: 200px' src='http://iidxsdvx.pancakeapps.com/pics/pic003.png'></img>
 </div>
 
 <hr>
@@ -25,21 +23,6 @@ This folder contains the code for IIDX layout. (9 buttons, 1 encoder, 9 LEDs)
 
 <hr>
 
-# Variations
-
-The code and CAD files included will let you make a Beatmania controller with interchangeable button plates, using an Arduino Leonardo to wire everything up.
-
-Included in this tutorial you can choose from 2 variations:
- 
-- Beatmania IIDX Controller (9 buttons + Turntable + 9 LEDs)
-
-- Beatmania IIDX+SDVX Controller (9 buttons + Turntable + 2 Knobs + 5 LEDs) 
-
-You can either build just one of them or build both.
-But you'd have to change the code everytime you change the button keypad layout.
-
-Due to the number of pins it's imposible to have 3 encoders, 9 buttons and also have 9 LED's, so you either use my code (with only 5 LED's) or modify it to remove 1 encoder for 2 more LED's.
-
 ## Part List / Hardware
 
 Things usde to make this controller.
@@ -47,14 +30,12 @@ You can find links here: http://iidxsdvx.pancakeapps.com
 
 * Arduino Leonardo
 * 1 High quality encoder (600ppr)
-* 2 Rotary encoders (24ppr)
-* 2 25x22 aluminum knobs
 * 9 50x33 beatmania buttons
 * 2 33x33 square buttons
 * 9 Omron D2MV-01-1C3 (50gr.) microswitch
-* Jumper wires
 * Crimp connectors
-* 400pin breadboard/protobar
+* 14 moles 2.54 4pin wires with male and female connectors
+* 1 perfboard
 
 ## Part List / Building Materials
 
@@ -85,105 +66,7 @@ I used clear acrylic because it's cheaper, also using only one thickness will ma
 
 The pins are assigned to every button and encoder. You'll see that the PCB has many pins from A0 to A5, and from 0 to 13, so you'll have 19 pins in total. Remember that buttons use one pin, but encoders will use 2 pins. The PCB also has 3 grounds (GND) to choose from, and a 5v output for the 600ppr encoder.
 
-This table shows configuration for both keypad layouts.
-
-**Hybrid IIDX-SDVX Layout**
-
-(not tested, code not included)
-
-<table><thead>
-<tr>
-<th>Button</th>
-<th style="text-align: center">Pin #</th>
-<th style="text-align: center">Button #</th>
-<th style="text-align: center">LED Pin #</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>FxR</td>
-<td style="text-align: center">11</td>
-<td style="text-align: center">Button 8</td>
-<td style="text-align: center">no LED</td>
-</tr>
-<tr>
-<td>FxL</td>
-<td style="text-align: center">12</td>
-<td style="text-align: center">Button 9</td>
-<td style="text-align: center">no LED</td>
-</tr>
-<tr>
-<td>BT-A</td>
-<td style="text-align: center">13</td>
-<td style="text-align: center">Button 7</td>
-<td style="text-align: center">6</td>
-</tr>
-<tr>
-<td>BT-B</td>
-<td style="text-align: center">A0</td>
-<td style="text-align: center">Button 5</td>
-<td style="text-align: center">7</td>
-</tr>
-<tr>
-<td>BT-C</td>
-<td style="text-align: center">A1</td>
-<td style="text-align: center">Button 3</td>
-<td style="text-align: center">8</td>
-</tr>
-<tr>
-<td>BT-D</td>
-<td style="text-align: center">A2</td>
-<td style="text-align: center">Button 1</td>
-<td style="text-align: center">9</td>
-</tr>
-<tr>
-<td>Start</td>
-<td style="text-align: center">A3</td>
-<td style="text-align: center">Button 4</td>
-<td style="text-align: center">10</td>
-</tr>
-<tr>
-<td>Button 6</td>
-<td style="text-align: center">A4</td>
-<td style="text-align: center">Button 6</td>
-<td style="text-align: center">no LED</td>
-</tr>
-<tr>
-<td>Button 2</td>
-<td style="text-align: center">A5</td>
-<td style="text-align: center">Button 2</td>
-<td style="text-align: center">no LED</td>
-</tr>
-</tbody></table>
-
-Button 2 and 6 are not used in SoundVoltex unless you want to use them as the Service button and Test button (which I don't recommend)
-
-<table><thead>
-<tr>
-<th>ENCODERS</th>
-<th style="text-align: center">DATA 1</th>
-<th style="text-align: center">DATA 2</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Encoder Right</td>
-<td style="text-align: center">0</td>
-<td style="text-align: center">1</td>
-</tr>
-<tr>
-<td>Encoder Left</td>
-<td style="text-align: center">2</td>
-<td style="text-align: center">3</td>
-</tr>
-<tr>
-<td>Encoder Turntable
-<td style="text-align: center">4</td>
-<td style="text-align: center">5</td>
-</tr>
-</tbody></table>
-
-That leaves pin 6 to 10 for LEDS (5 buttons)
-
-**Beatmania IIDX only Layout**
+**Beatmania IIDX Layout**
 
 Tested working. See code included.
 
@@ -284,9 +167,6 @@ That leaves pins 2 to 10 for LEDS (9 LEDS, enough for each button)
 12. Wire every button and LED with the breadboard using jumper wires.
 13. Connect the PCB to the computer using a USB cable, and using Arduino IDE load the code into the Arduino Leonardo.
 14. Finally mount the plate onto the mounting box and mount the disc on the high quality encoder.
-
-If everything went right there should be a new Arduino controller on your pc.
-Buttons 1 to 9 are the main buttons, and X and Y axis are both encoders.
 
 <hr>
 
