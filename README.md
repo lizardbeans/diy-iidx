@@ -1,4 +1,4 @@
-# Hybrid IIDX-SDVX Controller (DIY)
+# Beatmania IIDX Controller (DIY)
  
  
 <div style='float: center'>
