@@ -51,7 +51,7 @@ void doEncL(){
   }
 }
 
-void lights(uint8_t lightDesc){
+void lights(uint16_t lightDesc){
   for(int i=0;i<buttonCount;i++){
      if((lightDesc>>i)&1){
          digitalWrite(ledPins[i],HIGH);
