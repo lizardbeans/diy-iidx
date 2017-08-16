@@ -7,7 +7,8 @@
 
 <hr>
 
-Check http://iidxsdvx.pancakeapps.com for full instructions.
+Check http://iidx-diy.pancakeapps.com/ for full instructions.
+Also http://consandstuff.pancakeapps.com/ for more controllers
 
 CODE INSTRUCTIONS:
 
