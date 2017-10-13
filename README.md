@@ -2,13 +2,12 @@
  
  
 <div style='float: center'>
-  <img style='width: 200px' src='http://iidxsdvx.pancakeapps.com/pics/pic003.png'></img>
+  <img style='width: 200px' src='http://consandstuff.github.io/rhythmcons/beatmania-iidx/iidx-small/pics/pic003.png'></img>
 </div>
 
 <hr>
 
-Check http://iidx-diy.pancakeapps.com/ for full instructions.
-Also http://consandstuff.pancakeapps.com/ for more controllers
+Check http://consandstuff.github.io/ for full instructions.
 
 CODE INSTRUCTIONS:
 
@@ -27,7 +26,7 @@ This folder contains the code for IIDX layout. (9 buttons, 1 encoder, 9 LEDs)
 ## Part List / Hardware
 
 Things usde to make this controller.
-You can find links here: http://iidxsdvx.pancakeapps.com
+You can find links here: http://consandstuff.github.io/rhythmcons/beatmania-iidx/iidx-small/pics/pic003.png
 
 * Arduino Leonardo
 * 1 High quality encoder (600ppr)
